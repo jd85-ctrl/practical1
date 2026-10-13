@@ -4,6 +4,11 @@ document.getElementById("Button").addEventListener("click", function() {
     if (name === "" || document.getElementById("age").value === "") {
         document.getElementById("message").innerHTML = '<span style="color:red;">Please enter your name and age.</span>';
     }
+
+    else if (isNaN(age)) {
+    document.getElementById("message").innerHTML = '<span style="color:red;">Please enter a valid number.</span>';
+    }
+
     else if (age < 0 ) {
         document.getElementById("message").innerHTML = "Please enter valid age.";
 
